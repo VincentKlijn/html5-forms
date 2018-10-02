@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML5 Web Forms - NoValidate Attribute">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 - Using the novalidate attribute</title>
+    <link rel="stylesheet" type="text/css" media="all" href="_css/styles-main.css">
+</head>
+
+<body>
+
+    <!-- The novalidate attribute prevents forms from using their validation logic -->
+    <!-- use this to save a form state without actually submitting it for later processing -->
+    <h1>Using the -novalidate- Attribute</h1>
+
+    <p>The <code>novalidate</code> attribute indicates to the browser that the form can be submitted without running any of the built-in validation logic.</p>
+    <p>Why do this? Some sites allow their users to save their form progress without actually "submitting" it - this attribute makes that possible. The attribute actually has two forms - novalidate for the form, or formnovalidate for a particular control.</p>
+
+    <form action="" method="get">
+        <!-- this field is required, so submitting without value won't work -->
+		<p><label for="Text1" >First Name: </label><input name="Text1" type="text" class="novalidate" required ></p>
+		<p><label for="Text2">Last Name: </label><input name="Text2" type="text" class="novalidate" ></p>
+		<p><label for="Text3">Favorite Color: </label><input name="Text3" type="text" class="novalidate" ></p>
+        <!-- The submit button -->
+		<p><input name="Submit1" type="submit" value="submit" class="novalidate" >&nbsp;</p>
+        <!-- The save button, which should have the formnovalidate attribute -->
+		<p><input name="Save" type="submit" value="save" class="novalidate" formnovalidate >&nbsp;</p>
+	</form>
+
+</body>
+
+</html>

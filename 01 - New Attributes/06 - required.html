@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML5 Web Forms - Required Attribute">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 - Using the required attribute</title>
+    <link rel="stylesheet" type="text/css" media="all" href="_css/styles-main.css">
+
+    <!-- webforms2 add this functionality for browsers who do not support this form attribute -->
+    <script type="text/javascript" src="_javascript/webforms2.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Indicates that the associated control must have a value before the form can be submitted -->
+    <!-- This only checks if a value is present, not if that value is correct -->
+    <h1>Using the -required- Attribute</h1>
+
+    <p>The <code>required</code> attribute indicates to the browser that the form field must be given a value before the form can be submitted.</p>
+    <p>Browsers that support this attribute will check to see that the field was given a value before the form can be allowed to submit. In this case, we have also included a third-party JavaScript library to provide support for browsers that don't have native support.</p>
+    <p>Try moving the required attributes around in the source code to see what happens.</p>
+
+    <form action="" method="get">
+		<p><label for="Text1" >First Name: </label><input name="Text1" type="text" class="required" required ></p>
+		<p><label for="Text2">Last Name: </label><input name="Text2" type="text" class="required" ></p>
+		<p><label for="Text3">Favorite Color: </label><input name="Text3" type="text" class="required" ></p>
+		<p><input name="Submit1" type="submit" value="submit" class="required" >&nbsp;</p>
+	</form>
+
+</body>
+
+</html>

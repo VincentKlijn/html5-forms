@@ -1,0 +1,25 @@
+﻿/* Common CSS for the HTML5 Forms Demos */
+
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12pt;
+}
+
+label {
+	font-weight: bold;
+	position: relative;
+	display: block;
+	left: 10px;
+	margin-bottom: 5px;
+}
+
+input {
+	position: relative;
+    left: 10px;
+    width: 200px;
+	margin-bottom: 10px;
+}
+
+.highlight {
+	background-color: #FFFF00;
+}

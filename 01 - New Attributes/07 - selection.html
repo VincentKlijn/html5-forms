@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML5 Web Forms - Text Selection API">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 - Using the text selection api</title>
+    <link rel="stylesheet" type="text/css" media="all" href="_css/styles-main.css">
+
+    <script type="text/javascript">
+
+        // select text within a textbox using properties
+        function SelectSomeText1() {
+            // get the element called Textbox
+            var input = document.getElementById("Textbox");
+            // set the selectionStart property to the start box value
+            input.selectionStart = parseInt(document.getElementById('Start').value);
+            // set the selectionEnd property to the end box value
+            input.selectionEnd = parseInt(document.getElementById('End').value);
+            // put focus on the Textbox, otherwise the selection does not show
+            input.focus();
+        }
+
+        // select text within a textbox using the setSelectionRange method
+        function SelectSomeText2() {
+            // get the element called Textbox
+            var input = document.getElementById("Textbox");
+            // get the value of the element Start
+            var start = parseInt(document.getElementById('Start').value);
+            // get the value of the element End
+            var end = parseInt(document.getElementById('End').value);
+            // select the text using the method
+        	input.setSelectionRange(start, end);
+            // put focus on the Textbox, otherwise the selection does not show
+            input.focus();
+        }
+
+        // show the current values of Start and End
+        function ShowSelection() {
+            // get the element called Textbox
+            var input = document.getElementById("Textbox");
+            // display the properties selectionStart & selectionEnd
+            alert("Start: " + input.selectionStart + " End: " + input.selectionEnd );
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- HTML5 forms have the ability to set selection ranges of text input fields -->
+    <!-- select() / selectionStart / selectionEnd / setSelectionRange(start,end) -->
+    <h1>Using the -text selection- API</h1>
+
+    <p>This example shows how to use the Text Selection APIs to select ranges of text in &lt;input&gt; and &lt;textarea&gt; fields.</p>
+    <p><input type="text" id="Textbox" size="40" value="The text selection appears here" class="selectionText" /></p>
+	<p>Use the two fields below to enter the start and end index of the text to select. Then try using the buttons below to change and view the selection offsets.</p>
+	<p>Selection Start: <input type="text" id="Start" size="3" value="5" class="selection" > Selection End: <input type="text" id="End" size="3" value="15" class="selection" ></p>
+
+    <!-- Three buttons, each linked to a specific JS function -->
+    <p><button class="selection" onclick="SelectSomeText1()">Select Text Using Properties</button></p>
+    <p><button class="selection" onclick="SelectSomeText2()">Select Text Using setSelectionRange()</button></p>
+    <p><button class="selection" onclick="ShowSelection()">Display Current Selection offsets</button></p>
+
+</body>
+
+</html>

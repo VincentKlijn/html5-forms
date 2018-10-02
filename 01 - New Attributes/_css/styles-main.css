@@ -1,0 +1,52 @@
+﻿/* Common CSS for the HTML5 Forms Demos */
+
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12pt;
+}
+
+label {
+	font-weight: bold;
+}
+
+input {
+	position: absolute;
+    left: 75px;
+    width: 200px;
+}
+input.zipcode {
+	left: 100px;
+}
+input.novalidate, input.required {
+	left: 150px;
+}
+input.selectionText {
+	position: relative;
+	left: 5px;
+	width: 290px;
+}
+input.selection {
+	position: relative;
+	left: 5px;
+	width: 25px;
+	margin-right: 15px;
+}
+
+button.selection {
+	width: 300px;
+}
+
+input.cssStyling {
+	left: 30px;
+	margin-top: 5px;
+}
+input.Btn {
+	position: relative;
+	width: 74px;
+	margin: 10px;
+	float:left;
+}
+
+.highlight {
+	background-color: #FFFF00;
+}

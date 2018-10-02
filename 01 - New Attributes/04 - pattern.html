@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML5 Web Forms - Pattern Attribute">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 - Using the pattern attribute</title>
+    <link rel="stylesheet" type="text/css" media="all" href="_css/styles-main.css">
+
+    <!-- webforms2 add this functionality for browsers who do not support this form attribute -->
+    <script type="text/javascript" src="_javascript/webforms2.js"></script>
+
+</head>
+
+<body>
+
+    <!-- The pattern attribute restricts field input to a matching RegEx pattern -->
+    <h1>Using the -pattern- Attribute</h1>
+
+    <p>The <code>pattern</code> attribute ensures that text entered into a field matches a specified RegEx pattern. When the form is submitted, a browser that supports this feature checks to see if the value entered into the field matches the given Regular Expression (if the supplied value is not an empty string).</p>
+    <p>The Zip Code field in this form uses the pattern attribute to specify a pattern for a 5-digit ZIP code. For browsers without native pattern attribute support, the <strong>webforms2</strong> JavaScript library provides the necessary logic.</p>
+
+    <form method="get" action="">
+        <p>This field is limited to 5 digits</p>
+        <!-- "^[0-9]{5}$" - ^=startInput [0-9]=anything 0-9 {5}=five of these $=endInput -->
+        <p><label for="Text1">Zip Code: </label><input name="Text1" type="text" id="Text1" class="zipcode" pattern="^[0-9]{5}$" /></p>
+        <p><input name="Submit1" type="submit" value="submit" class="zipcode" >&nbsp;</p>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML5 Web Forms - Placeholder Attribute">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 - Using the placeholder attribute</title>
+    <link rel="stylesheet" type="text/css" media="all" href="_css/styles-main.css">
+
+    <!-- modernizr to check for browsr support of functionality -->
+    <script type="text/javascript" src="_javascript/modernizr-inputAttr-min.js"></script>
+    <script type="text/javascript" src="_javascript/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="_javascript/vkl_placeholder.js"></script>
+
+    <!-- fallback script for autofocus -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // if there is no support for the placeholder attribute
+            if (!Modernizr.input.placeholder) {
+                // create the placeholders using the javascript function
+                makePlaceholders();
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- The placeholder attribute is intended as a short hint to the user -->
+    <!-- Should not be used as an alternative to a label (W3C) -->
+    <!-- Displayed when the control has an empty value and is not currently focused -->
+    <h1>Using the -placeholder- Attribute</h1>
+
+    <p>The <code>placeholder</code> attribute displays placeholder text in an input control that suggests to the user the kind of input the control is looking for. The placeholder text displays when the control does not have focus and has no user-supplied input. When the control has focus, the placeholder text disappears.</p>
+    <p>The control in this form uses the placeholder attribute to specify placeholder text, if the browser supports it. Otherwise, a custom javascript function is used to accomplish the same effect.</p>
+
+    <form method="get" action="">
+        <p><label for="Text1">Field 1: </label><input name="Text1" type="text" id="Text1" placeholder="Placeholder Text 1" /></p>
+        <p><label for="Text2">Field 2: </label><input name="Text2" type="text" id="Text2" placeholder="Placeholder Text 2" /></p>
+        <p><label for="Text3">Field 3: </label><input name="Text3" type="text" id="Text3" placeholder="Placeholder Text 3" /></p>
+    </form>
+
+</body>
+
+</html>

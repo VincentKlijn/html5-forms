@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML5 Web Forms - The Progress Element">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 - Using the &lt;progress&gt; element</title>
+    <link rel="stylesheet" type="text/css" media="all" href="_css/styles-main.css">
+</head>
+
+<body>
+
+    <!-- Used to represent progress towards completion of a task (step 2 of 4) -->
+    <!-- Not meant to be used as indicator for measurements - use <meter> instead -->
+    <h1>Using the &lt;progress&gt; element</h1>
+
+    <p>The &lt;progress&gt; element provides a way to show the user how far along they are in completing a task. For example, when filling out a form that spans multiple pages, a &lt;progress&gt; element could be used to indicate how many steps have been completed out of a total number.</p>
+    <p><strong>Note:</strong> &lt;progress&gt; elements should not be used to indicate measurements, such as how much storage space is left. That is what &lt;meter&gt; is for.</p>
+
+    <h2>Example:</h2>
+
+    <p>You're halfway there!</p>
+
+    <form action="" method="get">
+        <!-- attributes : value=current value - max=maximum value -->
+        <!-- DOM access : position=calculated position, or value/max -->
+        <!-- the '50%' is fallback text for browsers who do not support this element -->
+        <p>Progress: <progress value="50.0" max="100.0">50%</progress></p>
+    </form>
+
+</body>
+
+</html>

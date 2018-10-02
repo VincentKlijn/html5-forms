@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML5 Web Forms - The Range Input Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 - Using the range input type</title>
+    <link rel="stylesheet" type="text/css" media="all" href="_css/styles-main.css">
+</head>
+
+<body>
+
+    <!-- The range type input indicates that the field is used for number ranges -->
+    <!-- On platforms that take care of form validation, this checks the number falls inside the range -->
+    <!-- Some browsers display a slider control (you need a second field to display the current value) -->
+    <!-- Can also use -min-, -max-, and -step- for more control -->
+    <h1>Using the -range- input type</h1>
+
+    <p>The range input type indicates to the browser that the field is expecting a numeric value selected from within a given range.</p>
+    <p>This input type can also be used with the min, max, and step attributes to provide additional UI features to help the user select a number.</p>
+
+    <form action="" method="get">
+        <p><label>Regular Text Field:</label><input name="Text1" type="text" /></p>
+        <p><label>Range Field:</label><input name="Text2" type="range" value="5"/></p>
+        <p><label>Range Field (Min and Max):</label><input name="Text3" type="range" min="0" max="120" value="5"/></p>
+        <p><label>Range Field (Step):</label><input name="Text4" type="range" value="5" step="5"/></p>
+        <p><label>Range Field (Min, Max, and Step):</label><input name="Text5" type="range" min="2" max="12" step="2" value="6"/></p>
+        <p><label>Range Field (Fractions, Min, Max, and Step):</label><input name="Text5" type="range" min="0.0" max="2.0" step="0.2" value="0.8"/></p>
+        <p><input type="submit" value="submit" /></p>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML5 Web Forms - The Datalist Element">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 - Using the &lt;datalist&gt; element</title>
+    <link rel="stylesheet" type="text/css" media="all" href="_css/styles-main.css">
+</head>
+
+<body>
+
+    <!-- The datalist element allows you to specify a list of common options for a text field -->
+    <h1>Using the &lt;datalist&gt; element</h1>
+
+    <p>The &lt;datalist&gt; element provides a way to give the browser a list of suggestions for a given form field. The &lt;datalist&gt; encloses one or more &lt;option&gt; tags that can be displayed to the user when they are filling out a particular form field. A &lt;datalist&gt; is associated with a form field by using the <code>list</code> attribute.</p>
+    <p><strong>Note:</strong> this does not force the user to pick a particular entry, it simply provides the user with suggestions that might be common for the field. To constrain the value of the field, you must either use a drop-down selector or use a validation method like the pattern attribute or some script code to enforce the constraints.</p>
+
+    <h2>Example:</h2>
+
+    <p>The following form field is a regular one-line text input element with an associated &lt;datalist&gt;. In browsers that support this feature, a drop-down list of suggested entries will appear when the field is given the input focus. The code to do so looks like:</p>
+
+    <pre>&lt;input name=&quot;Text5&quot; type=&quot;text&quot; <span class="highlight">list=&quot;suggestions&quot;</span>&gt;
+        &lt;datalist id=&quot;suggestions&quot;&gt;
+            &lt;option value=&quot;Capone&quot;&gt;&lt;/option&gt;
+            &lt;option value=&quot;The Ripper&quot;&gt;&lt;/option&gt;
+            &lt;option value=&quot;Hannibal&quot;&gt;&lt;/option&gt;
+            &lt;option value=&quot;Bonnie&quot;&gt;&lt;/option&gt;
+            &lt;option value=&quot;Clyde&quot;&gt;&lt;/option&gt;
+        &lt;/datalist&gt;</pre>
+
+    <form action="" method="post">
+        <label id="Label1" for="Text5">Input Field With Suggestions: </label><input name="Text5" type="text" list="suggestions">
+            <datalist id="suggestions">
+                <option value="Capone"></option>
+                <option value="The Ripper"></option>
+                <option value="Hannibal"></option>
+                <option value="Bonnie"></option>
+                <option value="Clyde"></option>
+            </datalist>
+    </form>
+
+</body>
+
+</html>

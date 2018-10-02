@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML5 Web Forms - The URL Input Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 - Using the url input type</title>
+    <link rel="stylesheet" type="text/css" media="all" href="_css/styles-main.css">
+
+    <!-- webforms2 adds this functionality for browsers who do not support this entry field -->
+    <script type="text/javascript" src="_javascript/webforms2.js"></script>
+
+</head>
+
+<body>
+
+    <!-- The url input type indicates that the field is used for web addresses -->
+    <!-- On platforms that take care of form validation, this takes care of url validation -->
+    <!-- On platforms like mobile, this type will change the keyboard layout for url entry -->
+    <h1>Using the -url- input type</h1>
+
+    <p>The URL field is used to indicate to the browser that the field is expecting a URL.</p>
+    <p>Browsers that support this field may validate input values to ensure that they are proper URL addresses.</p>
+
+    <form action="" method="get">
+        <p><label>Regular Text Field:</label><input name="Text1" type="text" /></p>
+        <p><label>URL Text Field:</label><input name="Text2" type="url" /></p>
+        <p><input type="submit" value="submit" /></p>
+    </form>
+
+</body>
+
+</html>

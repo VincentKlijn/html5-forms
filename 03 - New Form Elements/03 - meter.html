@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML5 Web Forms - The Meter Element">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 - Using the &lt;meter&gt; element</title>
+    <link rel="stylesheet" type="text/css" media="all" href="_css/styles-main.css">
+</head>
+
+<body>
+
+    <!-- Used to show a value that falls within a known range -->
+    <!-- Acts like a gauge, such as a thermometer -->
+    <!-- Not to be used to show progress - use the <progress> element for that -->
+    <h1>Using the &lt;meter&gt; element</h1>
+
+    <p>The &lt;meter&gt; element provides a way to show the user a measurement relative to an overall maximum amount. For example, a &lt;meter&gt; element might show the user how much storage space is left in a storage area.</p>
+    <p><strong>Note:</strong> &lt;meter&gt; elements should not be used to indicate progress against a number of steps. That is what &lt;progress&gt; is for.</p>
+
+    <h2>Example:</h2>
+
+    <p>Showing remaining storage space from an allotted amount</p>
+    <!-- The '300 out of 1GB used' is fallback text for browsers that don't support this element -->
+    <p>Current storage space usage: <meter value="30.0" min="0.0" max="100.0" low="20.0" high="80.0" optimum="40.0">300MB out of 1GB used</meter></p>
+
+</body>
+
+</html>

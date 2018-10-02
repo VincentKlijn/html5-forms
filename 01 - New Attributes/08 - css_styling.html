@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML5 Web Forms - CSS Styling">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 - Using CSS Pseudo-classes for CSS Styling</title>
+    <link rel="stylesheet" type="text/css" media="all" href="_css/styles-main.css">
+
+    <style type="text/css">
+        /* make the background of invalid fields redish */
+        input:invalid {
+            background-color: #FFDDDD;
+        }
+        /* make the background of valid fields greenish */
+        input:valid {
+            background-color: #DDFFDD;
+        }
+        /* draw a darkred border of 3px around mandatory fields */
+        input:required {
+            border-color: #800000;
+            border-width: 3px;
+        }
+        /* make the buttons grey (otherwise Submit will turn greenish) */
+        input.Btn {
+            background-color: #DDDDDD;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- CSS styles can be applied to elements using pseudo-classes -->
+    <!-- :valid / :invalid / :required -->
+    <h1>Using CSS Pseudo-Classes for CSS Styling of Form Elements</h1>
+
+    <form action="" method="get">
+        <label id="Label1" for="FirstName">First Name:</label><br /><input name="FirstName" type="text" class="cssStyling" required autofocus/>
+        <label id="Label2" for="LastName"><br /><br />Last Name:<br /></label><input name="LastName" type="text" class="cssStyling" required/>
+    	<br /><br />Email Address:<br /><input name="Text3" type="email" placeholder="name@domain.com" class="cssStyling" /><br /><br />
+    	<input name="Submit1" type="submit" value="submit" class="cssStyling Btn" /><input name="Reset1" type="reset" value="reset" class="cssStyling Btn" />
+    </form>
+
+</body>
+
+</html>

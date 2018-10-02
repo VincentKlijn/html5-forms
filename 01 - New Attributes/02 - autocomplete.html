@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML5 Web Forms - Autocomplete Attribute">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 - Using the autocomplete attribute</title>
+    <link rel="stylesheet" type="text/css" media="all" href="_css/styles-main.css">
+</head>
+
+<body>
+
+    <!-- Some browsers remember user input to prefill form fields later on -->
+    <!-- The autocomplete attribute lets individual form fields control this behavior -->
+    <!-- The autocomplete setting can be on or off or in the default state, -->
+    <!-- which defaults to whatever the setting for the parent form is -->
+    <!-- For security reasons some fields (like passwords) are not remembered -->
+    <h1>Using the -autocomplete- Attribute</h1>
+
+    <p>Some browsers provide native support for remembering the values of form fields and displaying those values to the user to speed data entry later.</p>
+    <p>The <code>autocomplete</code> attribute allows you to control whether a form field remembers its value. Try changing the values of the autocomplete attribute in the source code of this demo to see what happens.</p>
+
+    <form method="get" action="">
+        <p><label for="Text1">Field 1: </label><input name="Text1" type="text" id="Text1" autocomplete="on" /></p>
+        <p><label for="Text2">Field 2: </label><input name="Text2" type="text" id="Text2" autocomplete="off" /></p>
+        <p><label for="Text3">Field 3: </label><input name="Text3" type="text" id="Text3" autocomplete="off" /></p>
+        <p><input type="submit" value="Submit" /></p>
+    </form>
+
+</body>
+
+</html>
